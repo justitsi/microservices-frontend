@@ -1,0 +1,54 @@
+{
+    "Login_Page": {
+        "title": "Login Page",
+        "actions": {
+            "login": "Login",
+            "register": "Register"
+        }
+    },
+    "Home_Page": {
+        "title": "Homepage"
+    },
+    "ImageManagement_Page": {
+        "title": "Image Management"
+    },
+    "User_Page": {
+        "title": "User Page"
+    },
+    "LoginForm_Component": {
+        "labels": {
+            "username": "Username:",
+            "password": "Password:",
+            "submit": "Log in"
+        },
+        "errors": {
+            "empty_username": "Username cannot be empty",
+            "empty_password": "Password cannot be empty",
+            "short_password": "Password is too short, should be atleast 8 characters",
+            "network_error": "There was an error communicating with the authentication service",
+            "wrong_credentials": "The username and/or password you entered were incorrect"
+        }
+    },
+    "RegisterForm_Component": {
+        "labels": {
+            "username": "Username:",
+            "password": "Password:",
+            "repeat_password": "Repeat Password:",
+            "email": "Email:",
+            "repeat_email": "Repeat Email:",
+            "submit": "Register"
+        },
+        "errors": {
+            "empty_username": "Username cannot be empty",
+            "empty_password": "Password cannot be empty",
+            "empty_email": "Email cannot be empty",
+            "short_password": "Password is too short, should be at least 8 characters",
+            "password_mismatch": "Passwords do not match",
+            "invalid_email": "Email is not valid",
+            "email_mismatch": "Emails do not match",
+            "email_in_use": "Email is already in use",
+            "username_in_use": "Username is already in use",
+            "network_error": "There was an error communicating with the authentication service"
+        }
+    }
+}

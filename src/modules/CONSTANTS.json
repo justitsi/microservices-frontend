@@ -1,0 +1,8 @@
+{
+    "AUTH_API_ADDRESS": "http://localhost:8000",
+    "GET_IMAGE_API_ADDRESS": "localhost:8001/get",
+    "PUT_IMAGE_API_ADDRESS": "localhost:8001/put",
+    "DELETE_IMAGE_API_ADDRESS": "localhost:8001/delete",
+    "JWT_COOKIE_NAME": "jwt_token",
+    "JWT_TOKEN_DAYS_TTL": "2"
+}
