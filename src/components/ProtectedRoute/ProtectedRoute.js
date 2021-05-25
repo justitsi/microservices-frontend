@@ -1,8 +1,12 @@
 const ProtectedRoute = (props) => {
-    const destination = window.location.pathname;
-    if (!props.authenticated) window.location.replace(`/login/?next=${destination}`)
-    return (
-        props.component
-    )
+    if (!props.authenticated) {
+        const destination = window.location.pathname;
+        window.location.replace(`/login/?next=${destination}`)
+    }
+    else {
+        return (
+            props.component
+        )
+    }
 }
 export default ProtectedRoute

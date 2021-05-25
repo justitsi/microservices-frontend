@@ -1,4 +1,4 @@
-exports.sendRequest = async (method, address, body) => {
+export async function sendRequest(method, address, body) {
     const response = await fetch(address, {
         method: method, // *GET, POST, PUT, DELETE, etc.
         mode: 'cors',

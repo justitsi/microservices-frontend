@@ -47,26 +47,20 @@ function App() {
             />
             <Switch>
               {/* Public routes */}
+              <Route exact path='/'>
+                <Homepage />
+              </Route>
               <Route path='/login'>
                 <Login
                   postLogIn={postLogIn}
                 />
               </Route>
-              <Route exact path='/'>
-                <Homepage />
-              </Route>
-
-              {/* Protected Routes */}
               <Route path='/logout'>
-                <ProtectedRoute
-                  authenticated={loggedIn}
-                  component={
-                    <Logout
-                      postLogOut={postLogOut}
-                    />
-                  }
+                <Logout
+                  postLogOut={postLogOut}
                 />
               </Route>
+              {/* Protected Routes */}
               <Route path='/images'>
                 <ProtectedRoute
                   authenticated={loggedIn}
