@@ -27,11 +27,18 @@ const LoginForm = (props) => {
                 }
 
                 submitForm('POST', address, body).then(data => {
-                    if (data.code == 200) {
+                    if (parseInt(data.code) === 200) {
                         props.postLogIn()
-                        window.location.replace("/")
+                        const urlParams = new URLSearchParams(window.location.search);
+                        const destination = urlParams.get('next');
+                        if (destination) {
+                            if (!validURL(destination)) window.location.replace(destination)
+                            else window.location.replace("/")
+                        }
+                        else
+                            window.location.replace("/")
                     }
-                    if (data.code == 403) {
+                    if (parseInt(data.code) === 403) {
                         setResponseError(createErrorMsg(t('LoginForm_Component.errors.wrong_credentials')))
                     }
                     setErrorMsgs(errors);
@@ -100,3 +107,12 @@ const LoginForm = (props) => {
     )
 }
 export default LoginForm
+
+const validURL = (str) => {
+    var pattern = new RegExp('^(https?:\\/\\/)?' + // protocol
+        '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
+        '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
+        '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
+        '(\\#[-a-z\\d_]*)?$', 'i'); // fragment locator
+    return !!pattern.test(str);
+}

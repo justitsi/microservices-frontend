@@ -1,7 +1,5 @@
 import styles from './Navbar.module.scss';
-import CONSTANTS from './../../modules/CONSTANTS.json';
 import { Link } from "react-router-dom";
-
 
 const Navbar = (props) => {
     return (

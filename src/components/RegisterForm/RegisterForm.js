@@ -29,13 +29,16 @@ const RegisterForm = (props) => {
             }
 
             submitForm('POST', address, body).then(data => {
-                if (data.code == 200) {
+                if (parseInt(data.code) === 200) {
                     props.registrationComplete()
                 }
-                if (data.code == 400) {
-                    if (data.message == "Invalid email") setResponseError(createErrorMsg(t('RegisterForm_Component.errors.invalid_email')))
-                    if (data.message == "Username already in use") setResponseError(t("RegisterForm_Component.errors.username_in_use"))
-                    if (data.message == "Email already in use") setResponseError(t("RegisterForm_Component.errors.email_in_use"))
+                if (parseInt(data.code) === 400) {
+                    if (data.message.toLowerCase() === "Invalid email".toLowerCase())
+                        setResponseError(createErrorMsg(t('RegisterForm_Component.errors.invalid_email')))
+                    if (data.message.toLowerCase() === "Username already in use".toLowerCase())
+                        setResponseError(t("RegisterForm_Component.errors.username_in_use"))
+                    if (data.message.toLowerCase() === "Email already in use".toLowerCase())
+                        setResponseError(t("RegisterForm_Component.errors.email_in_use"))
                 }
             })
         }
