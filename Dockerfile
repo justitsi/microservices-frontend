@@ -1,7 +1,7 @@
 #################################################
 # Container to build application code
 #################################################
-FROM node:14 as node-build
+FROM node:14-alpine as node-build
 WORKDIR /app
 
 # Install dependencies
@@ -17,7 +17,7 @@ RUN npm run build
 # Container to host application code in
 # production
 #################################################
-FROM nginx:stable as frontend-production
+FROM nginx:stable-alpine as frontend-production
 
 EXPOSE 80
 COPY ./config/nginx.conf /etc/nginx/conf.d/default.conf
