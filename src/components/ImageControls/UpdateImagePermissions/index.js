@@ -1,0 +1,2 @@
+import UpdateImagePermissions from './UpdateImagePermissions'
+export default UpdateImagePermissions

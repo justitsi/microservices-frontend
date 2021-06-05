@@ -22,11 +22,11 @@ const RegisterForm = (props) => {
         const errors = getFormErrors()
         if (errors.length === 0) {
             const address = `${CONSTANTS.AUTH_API_ADDRESS}/register`
-            const body = {
+            const body = JSON.stringify({
                 "username": username,
                 "password": password,
                 "email": email
-            }
+            })
 
             submitForm('POST', address, body).then(data => {
                 if (parseInt(data.code) === 200) {

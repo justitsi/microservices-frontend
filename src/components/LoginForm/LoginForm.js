@@ -21,10 +21,10 @@ const LoginForm = (props) => {
         if (errors.length === 0) {
             try {
                 const address = `${CONSTANTS.AUTH_API_ADDRESS}/auth`
-                const body = {
+                const body = JSON.stringify({
                     "username": username,
                     "password": password
-                }
+                })
 
                 submitForm('POST', address, body).then(data => {
                     if (parseInt(data.code) === 200) {

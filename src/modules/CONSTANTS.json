@@ -1,8 +1,13 @@
 {
-    "AUTH_API_ADDRESS": "https://localhost:8443/api/jwt",
-    "GET_IMAGE_API_ADDRESS": "https://localhost:8443/api/images/get",
-    "PUT_IMAGE_API_ADDRESS": "https://localhost:8443/api/images/put",
-    "DELETE_IMAGE_API_ADDRESS": "https://localhost:8443/api/images/delete",
+    "AUTH_API_ADDRESS": "http://localhost:8080/api/jwt",
+    "GET_IMAGE_API_ADDRESS": "http://localhost:8080/api/images/get",
+    "PUT_IMAGE_API_ADDRESS": "http://localhost:8080/api/images/put",
+    "DELETE_IMAGE_API_ADDRESS": "http://localhost:8080/api/images/delete",
+    "VALID_FILE_TYPES": [
+        "jpg",
+        "jpeg",
+        "png"
+    ],
     "JWT_COOKIE_NAME": "jwt_token",
     "JWT_TOKEN_DAYS_TTL": "7"
 }
