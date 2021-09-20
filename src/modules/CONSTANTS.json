@@ -1,8 +1,8 @@
 {
-    "AUTH_API_ADDRESS": "http://localhost:8080/api/jwt",
-    "GET_IMAGE_API_ADDRESS": "http://localhost:8080/api/images/get",
-    "PUT_IMAGE_API_ADDRESS": "http://localhost:8080/api/images/put",
-    "DELETE_IMAGE_API_ADDRESS": "http://localhost:8080/api/images/delete",
+    "AUTH_API_ADDRESS": "/api/jwt",
+    "GET_IMAGE_API_ADDRESS": "/api/images/get",
+    "PUT_IMAGE_API_ADDRESS": "/api/images/put",
+    "DELETE_IMAGE_API_ADDRESS": "/api/images/delete",
     "VALID_FILE_TYPES": [
         "jpg",
         "jpeg",
